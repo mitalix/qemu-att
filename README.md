@@ -31,7 +31,7 @@ hostname:debian root/root your_user/your_user
 Selected Xfce to pick a slim window manager Deselectd "print server" and selected "ssh server" Accept grub boot loader on /dev/sda
 
 
-Setup a quick network using -net nic -net user,hostfwd=tcp::2222-:22"
+Setup a quick network using -net nic -net user,hostfwd=tcp::2222-:22
 Launch
 
 ```bash
