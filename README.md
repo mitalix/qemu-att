@@ -30,12 +30,19 @@ hostname:debian root/root your_user/your_user
 
 Selected Xfce to pick a slim window manager Deselectd "print server" and selected "ssh server" Accept grub boot loader on /dev/sda
 
+
+Setup a quick network using -net nic -net user,hostfwd=tcp::2222-:22"
 Launch
 
 ```bash
-$ qemu-system-x86_64 -hda ../images/qemu-buster/mydisk.img -smp 4 -m 2G
+$ qemu-system-x86_64 -hda ../images/qemu-buster/mydisk.img -smp 4 -m 2G -net nic -net user,hostfwd=tcp::2222-:22
 ```
 
+Then you can log into the system from the host:
+
+```
+# host > ssh -p 2222 italix@localhost
+```
 
 Optional With some kvm acceleration:
 check to see if it's in the kernel and drivers are loaded:
