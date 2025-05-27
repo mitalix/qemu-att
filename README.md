@@ -44,6 +44,34 @@ Then you can log into the system from the host:
 # host > ssh -p 2222 italix@localhost
 ```
 
+You could also use sftp when needed:
+
+```
+sftp localhost -oPort=2222
+```
+
+
+#### Kubernetes: 
+
+Install docker
+
+https://docs.docker.com/engine/install/debian/
+
+```
+user@guest:~/kub$ sudo apt install docker
+```
+
+
+curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+
+
+
+
+
+
+
+
+
 Optional With some kvm acceleration:
 check to see if it's in the kernel and drivers are loaded:
 
